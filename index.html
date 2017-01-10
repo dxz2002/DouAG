@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+		<meta name="description" content="DouAG是一个用于论坛签名档的签名生成器，背景精致，数据准确、完善。由DaiDR于16年7月21日建设完毕。" />
+		<meta name="keyword" content="戴兜,签名档,论坛签名档,生成器,DouAG" />
+		<script type="text/javascript" src="js/srf.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/overhang.min.css" />
+		<script type="text/javascript" src="js/overhang.min.js"></script>
+
+		<title>论坛图片签名档生成器 - DouAG</title>
+		<!-- 多说公共JS代码 start (一个网页只需插入一 -->
+		<script type="text/javascript">
+			var duoshuoQuery = {short_name:"douag"};
+				(function() {
+					var ds = document.createElement('script');
+					ds.type = 'text/javascript';ds.async = true;
+					ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+					ds.charset = 'UTF-8';
+					(document.getElementsByTagName('head')[0] 
+					 || document.getElementsByTagName('body')[0]).appendChild(ds);
+				})();
+		</script>
+			
+		<!-- 多说公共JS代码 end -->
+	</head>
+	<body>
+		<div class="header">
+			<a href="index.html" style="text-decoration: none;color: #9F9F9F;" title="DouAG - 最好的论坛签名档生成器">
+				<span class="biglogo">DouAG</span>
+			</a>
+			<div style="float:right;" class="whitebuttondemo">
+				<a class="me_1" onclick="downexe();">客户端下载</a>
+				<span class="up">9.01MB - exe</span>
+			</div>
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<div class="thepages">
+			<div style="text-align: left;padding-left: 10px;padding-top: 1px">
+				<p class="thetext" style="font-size:17px;color: #000;">1.选择你需要的背景图片
+					<span style="color:red;font-size:14px;"> 必填</span>
+				</p>
+			</div>
+			<div class="thetext" id="thediv1">
+				<p style="color: #8D8D8D;font-size:20px" id="thetexts">龙猫系列</p>
+				<input type="radio" name="radio-btn" value="1" /><span style="font-size:15px" id="theradios">龙猫1</span>
+				<input type="radio" name="radio-btn" value="2" /><span style="font-size:15px" id="theradios">龙猫2</span>
+				
+				<p style="color: #8D8D8D;font-size:20px" id="thetexts">海贼王系列</p>
+				<input type="radio" name="radio-btn" value="3" /><span style="font-size:15px" id="theradios">海贼王1</span>
+				<input type="radio" name="radio-btn" value="4" /><span style="font-size:15px" id="theradios">海贼王2</span>
+				
+				<p style="color: #8D8D8D;font-size:20px" id="thetexts">萌宠系列</p>
+				<input type="radio" name="radio-btn" value="5" /><span style="font-size:15px" id="theradios">小猫</span>
+				<input type="radio" name="radio-btn" value="6" /><span style="font-size:15px" id="theradios">小狗</span>
+					
+				<p style="color: #8D8D8D;font-size:20px" id="thetexts">蜘蛛侠系列</p>
+				<input type="radio" name="radio-btn" value="7"/><span style="font-size:15px" id="theradios">红蜘蛛1</span>
+				<input type="radio" name="radio-btn" value="8" /><span style="font-size:15px" id="theradios">红蜘蛛2</span>
+				<input type="radio" name="radio-btn" value="9" /><span style="font-size:15px" id="theradios">黑蜘蛛1</span>
+
+				<p style="color: #8D8D8D;font-size:20px" id="thetexts">钢铁侠系列</p>
+				<input type="radio" name="radio-btn" value="10" /><span style="font-size:15px" id="theradios">钢铁侠1</span>
+				<input type="radio" name="radio-btn" value="11" /><span style="font-size:15px" id="theradios">钢铁侠2</span>
+
+				<p style="color: #8D8D8D;font-size:20px" id="thetexts">战争机器系列</p>
+				<input type="radio" name="radio-btn" value="12" /><span style="font-size:15px" id="theradios">战争机器1</span>
+				<input type="radio" name="radio-btn" value="13" /><span style="font-size:15px" id="theradios">战争机器2</span>
+				
+				<p style="color: #8D8D8D;font-size:20px" id="thetexts">MineCraft系列</p>
+				<input type="radio" name="radio-btn" value="14" /><span style="font-size:15px" id="theradios">icrdr渲染1</span>
+				<input type="radio" name="radio-btn" value="15" /><span style="font-size:15px" id="theradios">icrdr渲染2</span>
+			</div>
+			<br />
+			<div style="text-align: left;padding-left: 10px;padding-top: 1px">
+				<p class="thetext" style="font-size:17px;color: #000;">2.输入你需要的个性签名内容
+					<span style="color:red;font-size:14px;"> 必填</span>
+				</p>
+			</div>
+			<div style="line-height:0px;color: #9F9F9F;text-align:center;width: 96%;margin: 0 auto;height: auto">
+				<textarea name="wd" id="thewd"></textarea>
+				<button type="button" id="thetexts2" class="thetext" onclick="makeinfo()">开始制作</button>
+			</div>
+			<br />
+			<br />
+			<div style="margin:0 auto;width:450px;height:245px;" align="center">
+				<img src="" id="image" class="lazy" name="image" alt="※在这里可以看到签名档的效果※"/>
+			</div>
+			<br />
+			<div style="text-align: left;padding-left: 10px;padding-top: 1px">
+				<p class="thetext" style="font-size:17px;color: #000;">复制签名档代码
+					<span style="color:blue;font-size:14px;"> [支持大多数主流论坛]</span>
+				</p>
+			</div>
+			<div style="line-height:0px;color: #9F9F9F;text-align:center;width: 96%;margin: 0 auto;height: auto">
+				<textarea name="code" id="code" readonly="readonly"></textarea>
+				<button type="button" onclick="copycode()" class="thetext" id="thetexts1">复制代码</button>
+			</div>
+			<br />
+			<br />
+			<br />
+		</div>
+		<br />
+		<br />
+		<div class="thepages" id="thebottons2" onclick="start();">
+			<p id="startbotton" class="thetext">点击此处以显示杂项</p>
+		</div>
+		<div class="zaxiang" style="display: none;">
+			<div class="thepages">
+				<p style="line-height:0px;padding-top: 15px;color: #000;text-align: center;font-size:17px;" class="thetext">
+					<span style="color: green;font-size:30px;">☺</span>有什么好的改进建议，欢迎向我提出
+					<span style="color: green;font-size:30px;">☺</span>
+					<span id="close2" style="width:50px;float:right;line-height:0px;color: #000;text-align: center;font-size:30px;" title="隐藏杂项" class="thetext"  onclick="stop();">×</span>
+				</p>
+				<div style="width: 95%;margin:0 auto;">
+					<!-- 多说评论?start -->
+					<div id="plk" >
+						<div class="ds-thread" data-thread-key="1" data-title="DouAG" data-url="http://www.daidou.pw/qm">
+						</div>
+					</div>
+					<!-- 多说评论?end -->
+				</div>
+			</div>
+			<br />
+			<br />
+			<div class="thepages">
+				<p style="line-height:0px;padding-top: 15px;color: #000;text-align: center;font-size:17px;" class="thetext">
+					<span style="color: green;font-size:30px;">☺</span>你的打赏就是我们的动力
+					<span style="color: green;font-size:30px;">☺</span>
+				</p>
+				<div style="margin:0 auto;" align="center">
+					<img src="img/dashang.png" id="image" class="lazy" name="image" alt="二维码图片无法显示？" />
+				</div>
+				<br />
+				<br />
+			</div>
+			<br />
+			<br />
+		</div>
+		<br />
+		<br />
+		
+		
+		<div style="width: auto;height: 45px;text-align: center;font-size:14px;margin: 0 auto;" class="thefooter">
+			<a style="color:#fff;">Copyright © 2015-2016.
+				<daidou class="my-face"> DaiDR(●'◡'●)ﾉ♥</daidou> All rights reserved.
+			</a>
+			<br />
+			<SCRIPT language='javascript'>
+				function show_date_time() {
+					window.setTimeout("show_date_time()", 1000);
+					BirthDay=new Date("7/21/2016 07:00:00");
+					today=new Date();
+					timeold=(today.getTime()-BirthDay.getTime());
+					sectimeold=timeold/1000;
+					secondsold=Math.floor(sectimeold);
+					msPerDay=24*60*60*1000;
+					e_daysold=timeold/msPerDay;
+					daysold=Math.floor(e_daysold);
+					e_hrsold=(e_daysold-daysold)*24;
+					hrsold=setzero(Math.floor(e_hrsold));
+					e_minsold=(e_hrsold-hrsold)*60;
+					minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+					seconds=setzero(Math.floor((e_minsold-minsold)*60));
+					span_dt_dt.innerHTML="DouAG已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+				}
+				function setzero(i) {
+					if (i<10) {
+						i="0" + i
+					};
+						return i;
+				}
+				show_date_time();
+			</SCRIPT>
+			<SPAN id="span_dt_dt" style="color:#ffffff;"></SPAN>
+			<br />
+			<a style="color:#ffffff;">
+				<script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
+				<script>lwlhitokoto()</script>
+			</a>
+		</div>
+		<script>
+			function downexe(){
+				$("body").overhang({
+				custom: true,
+				primary: "#919191", // 背景颜色
+				accent: "#6C6C6C", // 按钮边框的颜色
+				type: "success",
+				duration: "1.5",
+				message: "已经发起下载任务~"
+				});
+				window.location.href="DouAG.exe";
+			}
+			function makeinfo(){
+				$("body").overhang({
+				custom: true,
+				primary: "#919191", // 背景颜色
+				accent: "#6C6C6C", // 按钮边框的颜色
+				type: "success",
+				duration: "1.5",
+				message: "签名档制作完成啦！"
+				});
+				setImgcode();
+			}
+			function makeerror(){
+				$("body").overhang({
+				type: "error",
+				duration: "1.5",
+				message: "请选择签名档背景！"
+				});
+			}
+			function copycodeinfo(){
+				$("body").overhang({
+				custom: true,
+				primary: "#919191", // 背景颜色
+				accent: "#6C6C6C", // 按钮边框的颜色
+				type: "success",
+				duration: "1.5",
+				message: "代码已经复制，粘贴即可使用"
+				});
+			}
+			function copycode() {
+				var e = document.getElementById("code");
+				e.select();
+				document.execCommand("Copy"); 
+				copycodeinfo();
+			} 
+			function start() {
+				$('#thebottons2').css('display','none');
+				$(".zaxiang").fadeIn();
+			} 
+			function stop() {
+				$('#thebottons2').css('display','block');
+				$(".zaxiang").fadeOut();	
+			} 
+			function setImgcode() {
+				var str = document.getElementsByName("radio-btn");
+				var checked = "";
+				for (i = 0 ;i < str.length ;i++) {
+					if(str[i].checked == true) {
+						checked = str[i].value;
+						break;
+					}
+				}
+				var diywords = document.getElementById("thewd").value;
+				var url_out = "";
+				if(checked == '') {
+					makeerror();
+					return;
+				}
+				if(diywords != '') {
+					url_out = 'http://www.daidou.pw/qm/pic.php?wd=' + diywords + "&lx=" + checked ;
+				}
+				else{
+					url_out = 'http://www.daidou.pw/qm/pic.php?lx=' + checked;
+				}
+				document.getElementById('code').value = '[img=300,163]' + url_out + '[/img]';
+				document.getElementById('image').src = '';
+				document.getElementById('image').alt = '签名档图片载入中...';
+				document.getElementById('image').style = 'width:450px;height:245px;border:none;margin:0 auto;border:2px solid #8D8D8D;color:#8D8D8D;';
+				document.getElementById('image').src = 'http://www.daidou.pw/qm/pic.php?wd=' + diywords + "&lx=" + checked;
+			}
+		</script>
+
+		<!----发布请勿删除/修改本段↓---->
+		<script>
+		console.log('「DouAG v1.1」<http://github.com/dxz2002/DouAG> @DaiDR 于 2015/10/16');
+		</script>
+		<script type="text/javascript" src="js/consoletip.js"></script>
+		<!----发布请勿删除/修改本段↑---->
+	</body>
+</html>
